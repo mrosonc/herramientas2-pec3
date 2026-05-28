@@ -52,7 +52,7 @@
   }
 
   .speaker-card {
-    @apply h-full flex-[1_1_100%] overflow-hidden rounded-lg border border-border bg-surface shadow-[var(--shadow-soft)] [@container_speakers-list_(min-width:_44rem)]:flex-[1_1_calc((100%-1.25rem)/2)] [@container_speakers-list_(min-width:_68rem)]:flex-[1_1_calc((100%-3rem)/3)];
+    @apply h-full flex-[1_1_100%] overflow-hidden rounded-lg border border-border bg-surface shadow-[var(--shadow-soft)];
   }
 
   .speaker-card-image {
