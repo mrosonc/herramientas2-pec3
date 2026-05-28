@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Ponentes | Jornadas de Artesania</title>
+  </head>
+  <body class="page--speakers min-h-screen bg-[linear-gradient(180deg,rgb(45_111_109/8%),transparent_20rem),#fffaf2] font-sans text-ink">
+    <include src="./views/site-header.html"></include>
+
+    <main class="page-layout w-[min(100%-2rem,70rem)] max-[30rem]:w-[min(100%-1.5rem,70rem)] min-[48rem]:max-[64rem]:w-[min(100%-3rem,70rem)] min-[48rem]:max-[64rem]:py-10">
+      <include
+        src="./components/section-heading.html"
+        locals='{"id":"speakers-title","title":"Ponentes","text":"Seis perfiles invitados comparten procesos de trabajo, materiales y formas de entender la produccion artesanal desde una mirada actual."}'
+      ></include>
+
+      <section class="flex flex-wrap gap-6 [container:speakers-list/inline-size] [@container_speakers-list_(min-width:_44rem)]:gap-5 [@container_speakers-list_(min-width:_68rem)]:gap-6" aria-label="Listado de ponentes">
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/clara-vidal.jpg","alt":"Retrato de Clara Vidal","name":"Clara Vidal","role":"Ceramista y docente","text":"Investiga esmaltes de baja temperatura y piezas utilitarias hechas con arcillas de proximidad."}'></include>
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/mateo-soler.jpg","alt":"Retrato de Mateo Soler","name":"Mateo Soler","role":"Cesteria contemporanea","text":"Recupera fibras vegetales locales y las aplica a objetos domesticos de uso diario."}'></include>
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/nuria-camps.jpg","alt":"Retrato de Nuria Camps","name":"Nuria Camps","role":"Diseno textil","text":"Trabaja tintes naturales y pequenas series textiles con criterios de bajo impacto."}'></include>
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/ramon-pujol.jpg","alt":"Retrato de Ramon Pujol","name":"Ramon Pujol","role":"Madera y herramientas manuales","text":"Construye mobiliario sencillo y explica tecnicas de ensamblaje sin herrajes visibles."}'></include>
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/leire-moreno.jpg","alt":"Retrato de Leire Moreno","name":"Leire Moreno","role":"Vidrio artesanal","text":"Combina vidrio soplado y piezas recuperadas para crear objetos de iluminacion."}'></include>
+        <include src="./components/speaker-card.html" locals='{"image":"./assets/images/unsplash/omar-benali.jpg","alt":"Retrato de Omar Benali","name":"Omar Benali","role":"Grabado y estampacion","text":"Imparte talleres de sellos, monotipos y estampacion manual sobre papel reciclado."}'></include>
+      </section>
+    </main>
+
+    <include src="./views/site-footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

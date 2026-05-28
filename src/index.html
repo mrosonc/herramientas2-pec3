@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Inicio | Jornadas de Artesania</title>
+  </head>
+  <body class="page--home min-h-screen bg-[linear-gradient(180deg,rgb(45_111_109/8%),transparent_20rem),#fffaf2] font-sans text-ink">
+    <include src="./views/site-header.html"></include>
+
+    <main class="page-layout w-[min(100%-2rem,70rem)] max-[30rem]:w-[min(100%-1.5rem,70rem)]">
+      <section
+        class="relative isolate grid min-h-[min(48rem,calc(100dvh-9rem))] overflow-hidden border border-border bg-cover bg-center p-6 text-paper shadow-[var(--shadow-soft)] max-[48rem]:min-h-0 max-[48rem]:gap-2 max-[48rem]:p-2.5 min-[42rem]:grid-cols-6 min-[42rem]:grid-rows-[minmax(5rem,0.55fr)_minmax(7rem,auto)_minmax(6rem,0.7fr)_minmax(4rem,auto)_minmax(5rem,0.5fr)] min-[42rem]:gap-4 min-[42rem]:p-8 min-[80rem]:min-h-[min(52rem,calc(100dvh-8rem))] min-[80rem]:p-10"
+        style="background-image: linear-gradient(115deg, rgb(36 49 59 / 82%), rgb(36 49 59 / 38%)), linear-gradient(0deg, rgb(122 63 42 / 38%), rgb(122 63 42 / 18%)), url('./assets/images/unsplash/ceramica-taller.jpg');"
+        aria-labelledby="home-title"
+      >
+        <div
+          class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(rgb(255_250_242/16%)_1px,transparent_1px),linear-gradient(90deg,rgb(255_250_242/16%)_1px,transparent_1px)] bg-[length:calc(100%/6)_calc(100%/5)] max-[48rem]:bg-[length:calc(100%/3)_4.5rem] max-[48rem]:opacity-45"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgb(240_196_95/30%),transparent_20rem),linear-gradient(180deg,transparent_62%,rgb(36_49_59/54%))] max-[48rem]:bg-[linear-gradient(180deg,rgb(36_49_59/34%),rgb(36_49_59/72%))]"
+          aria-hidden="true"
+        ></div>
+
+        <div class="border border-paper/30 max-[48rem]:hidden min-[42rem]:col-start-4 min-[42rem]:col-end-7 min-[42rem]:row-start-1 min-[42rem]:row-end-4 min-[42rem]:min-h-full" aria-hidden="true"></div>
+
+        <div class="bg-paper/85 p-5 text-ink backdrop-blur-md max-[48rem]:p-3 min-[42rem]:col-start-1 min-[42rem]:col-end-5 min-[42rem]:row-start-1 min-[42rem]:row-end-3 min-[42rem]:grid min-[42rem]:items-center">
+          <p class="mb-2 text-[clamp(0.8rem,2vw,1rem)] font-extrabold uppercase text-accent">
+            Jornadas de artesania contemporanea
+          </p>
+          <h1 id="home-title" class="mb-0 max-w-[12ch] font-serif text-[clamp(3.2rem,6vw,4.5rem)] font-normal leading-[1.05] text-primary max-[48rem]:max-w-[8.5ch] max-[48rem]:text-[clamp(2.45rem,12vw,4.1rem)] max-[48rem]:leading-[0.92]">
+            Oficio, materia y territorio
+          </h1>
+        </div>
+
+        <div class="bg-paper/85 p-4 font-bold text-ink backdrop-blur-md [border-inline-start:0.35rem_solid_#f0c45f] max-[48rem]:p-3 max-[48rem]:font-semibold max-[48rem]:[border-inline-start-width:0.25rem] min-[42rem]:col-start-2 min-[42rem]:col-end-5 min-[42rem]:row-start-3 min-[42rem]:row-end-4 min-[42rem]:self-end">
+          <p class="mb-0">
+            Tres dias de charlas, talleres y demostraciones para acercar la
+            artesania local a nuevos publicos y conectar oficios tradicionales
+            con herramientas actuales.
+          </p>
+        </div>
+
+        <dl class="grid gap-3 min-[42rem]:contents" aria-label="Datos principales del evento">
+          <include src="./components/event-detail.html" locals='{"className":"min-[42rem]:col-start-5 min-[42rem]:col-end-7 min-[42rem]:row-start-4 min-[42rem]:row-end-5","label":"Fecha","value":"14, 15 y 16 de junio"}'></include>
+          <include src="./components/event-detail.html" locals='{"className":"min-[42rem]:col-start-1 min-[42rem]:col-end-3 min-[42rem]:row-start-4 min-[42rem]:row-end-6","label":"Lugar","value":"Centre Civic del Raval"}'></include>
+          <include src="./components/event-detail.html" locals='{"className":"min-[42rem]:col-start-3 min-[42rem]:col-end-5 min-[42rem]:row-start-4 min-[42rem]:row-end-6","label":"Actividades","value":"Charlas, talleres y mercado de piezas"}'></include>
+        </dl>
+
+        <p class="m-0 hidden self-end justify-self-end pb-2 pr-1 font-serif text-[clamp(1rem,1.8vw,1.6rem)] font-bold leading-none text-highlight [text-shadow:0_0.25rem_0.75rem_rgb(36_49_59/45%)] min-[42rem]:col-start-5 min-[42rem]:col-end-7 min-[42rem]:row-start-3 min-[42rem]:row-end-4 min-[42rem]:block" aria-hidden="true">14-16</p>
+
+        <a class="flex h-full min-h-13 items-start justify-center rounded-[0.5rem] bg-primary px-6 pt-5 pb-3 font-sans text-sm font-extrabold text-paper no-underline backdrop-blur-md hover:bg-[#65331f] min-[42rem]:col-start-5 min-[42rem]:col-end-7 min-[42rem]:row-start-5 min-[42rem]:row-end-6" href="./ponentes.html">
+          Ver ponentes
+        </a>
+      </section>
+    </main>
+
+    <include src="./views/site-footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

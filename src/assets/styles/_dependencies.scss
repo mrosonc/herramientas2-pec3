@@ -1,0 +1,95 @@
+/**
+ * Import any npm dependencies in this file
+ * see commented examples below
+ */
+
+@import "tailwindcss/index.css";
+
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --color-ink: #24313b;
+  --color-paper: #fffaf2;
+  --color-surface: #ffffff;
+  --color-primary: #7a3f2a;
+  --color-accent: #2d6f6d;
+  --color-muted: #506d83;
+  --color-border: #d79f8b;
+  --color-highlight: #f0c45f;
+
+  --shadow-soft: 0 1rem 2.5rem rgb(36 49 59 / 12%);
+}
+
+@layer base {
+  a {
+    @apply text-primary;
+    text-underline-offset: 0.18em;
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-3 outline-highlight;
+  }
+}
+
+@layer components {
+  .page-layout {
+    @apply mx-auto py-12 max-[30rem]:py-8;
+  }
+
+  .event-card {
+    @apply border border-primary/25 bg-paper/85 p-3 text-ink backdrop-blur-md;
+  }
+
+  .event-card-label {
+    @apply text-[0.78rem] font-bold uppercase tracking-[0.08em] text-accent;
+  }
+
+  .event-card-value {
+    @apply m-0 font-serif text-[clamp(1.1rem,2vw,1.45rem)] leading-[1.15];
+  }
+
+  .speaker-card {
+    @apply h-full flex-[1_1_100%] overflow-hidden rounded-lg border border-border bg-surface shadow-[var(--shadow-soft)];
+  }
+
+  .speaker-card-image {
+    @apply aspect-[16/11] w-full object-cover [@container_speakers-list_(min-width:_44rem)]:aspect-[4/3];
+  }
+
+  .speaker-card-title {
+    @apply mb-2 font-serif text-[clamp(1.4rem,3vw,2rem)] leading-[1.1] text-ink;
+  }
+
+  .speaker-card-role {
+    @apply mb-4 font-bold text-muted;
+  }
+}
+
+// IA — Cooking contest 2024 edition
+@layer components {
+  .ia-header {
+    @apply flex items-center justify-between px-8 py-4 border-b border-gray-200;
+  }
+
+  .ia-nav-active {
+    @apply bg-black text-white text-sm px-4 py-2 rounded;
+  }
+
+  .ia-recipe-card {
+    @apply border border-gray-200 bg-white p-5 rounded;
+  }
+
+  .ia-footer {
+    @apply bg-gray-50 border-t border-gray-200;
+  }
+
+  .ia-footer-col-title {
+    @apply font-bold text-sm mb-3;
+  }
+}
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
